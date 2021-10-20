@@ -1,0 +1,43 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #F8F8F8;
+    scroll-behavior: smooth;
+}
+
+
+.container-fluid {
+    background-color: #83ACF2; 
+    text-align: center;
+}
+
+/* Tela inicial */
+
+.tela-inicial {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    color: #63B3ED;
+}
+
+#img-logo-inicial {
+    display: flex;
+    justify-content: center;
+}
+
+.tela-inicial p{
+    margin: 0 5% 5% 5%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#titulo-principal {
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
