@@ -124,6 +124,8 @@
     </section>
 </body>
 
+<?php include('footer.php'); ?>
+
 <!--Script Validação Campos-->
 <script>
     (function() {
