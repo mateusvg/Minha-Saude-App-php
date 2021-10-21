@@ -56,6 +56,13 @@ session_start();
     }
     ?>
   </p>
+  <p class="text-center text-success">
+    <?php 
+    
+    ?>
+  </p>
+
+
   <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>
 

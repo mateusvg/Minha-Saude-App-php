@@ -33,11 +33,11 @@
     <section>
         <div class="overflow-scroll p-5">
             <h1>Cadastro de Novo Usuário</h1>
-            <form>
+            <form name="Cadastro" action="cadastroPost.php" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputName">Nome</label>
-                        <input type="name" class="form-control" id="inputName" placeholder="Nome" required>
+                        <input type="name" class="form-control" id="inputName" name="inputName" placeholder="Nome" required>
                         <div class="invalid-feedback">
                             Insira um nove
                         </div>
@@ -50,11 +50,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                        <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword">Senha</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
+                        <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Senha" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -104,19 +104,19 @@
                 </div>
                 <div class="form-group">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="paciente">
+                        <input class="form-check-input" type="checkbox" name="paciente" value="1">
                         <label class="form-check-label" for="gridCheck">
                             Paciente
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="funcionario">
+                        <input class="form-check-input" type="checkbox" name="funcionario" value="1">
                         <label class="form-check-label" for="gridCheck">
                             Funcionario
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" name="enviar" >Cadastrar</button>
             </form>
         </div>
     </section>
