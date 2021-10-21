@@ -49,6 +49,8 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
                         <td><?php echo $row["labName"]; ?></td>
                         <td><?php echo $row["medType"]; ?></td>
                         <td><?php echo $row["price"]; ?></td>
+                        <td><button type="button" class="btn btn-danger">Deletar</button></td>
+                        <td><img src="img/edit.png" width="20px" /></td>
                     </tr>
                 <?php
                     $i++;
