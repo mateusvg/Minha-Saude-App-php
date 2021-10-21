@@ -30,8 +30,6 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="cadtratamento.php">Cadastrar</a>
-            <a class="dropdown-item" href="#">Procurar</a>
-            <a class="dropdown-item" href="#">Alterar</a>
           </div>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,13 +38,12 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="cadmedicamento.php">Cadastrar</a>
             <a class="dropdown-item" href="cadmedicamentoGet.php">Procurar</a>
-            <a class="dropdown-item" href="#">Alterar</a>
           </div>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
-      </form>
+      </form> -->
     </div>
   </nav>
 </header>

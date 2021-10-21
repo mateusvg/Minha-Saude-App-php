@@ -22,27 +22,46 @@
     </style>
 
 </head>
-<?php include('banco/conexao.php'); ?>
 
 <?php include('menu.php'); ?>
+<?php include('banco/conexao.php'); ?>
 
 <?php
-$result = mysqli_query($conn, "SELECT * FROM medicamentos");
+error_reporting(0);
+if (count($_POST) > 0) {
+    $procurar = $_POST['procurar'];
+    $result = mysqli_query($conn, "SELECT * FROM medicamentos where medName='$procurar' ");
+}
 ?>
 
+
+
+
+<head>
+    <title> Retrive data</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+
 <body>
+    <div class="d-flex-col p-3 m-3">
+        <div class="d-flex-col p-3 m-3">
+            Procurar Medicamentos
+        </div>
+        <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
+            <input class="form-control mr-sm-2" type="search" placeholder="Procurar" name="procurar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+        </form>
+    </div>
     <?php
     if (mysqli_num_rows($result) > 0) {
     ?>
-        <div class="d-flex-col p-3 m-3">
-            <div class="d-flex-col p-3 m-3">
-                Procurar Medicamentos
-            </div>
-            <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
-                <input class="form-control mr-sm-2" type="search" placeholder="Procurar" name="procurar" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
-            </form>
-        </div>
         <div class="table-responsive p-5">
             <table class="table">
 
@@ -86,14 +105,20 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
 
             </table>
         </div>
-    <?php
-    } else {
-        echo "Não foram encontrados resultados";
-    }
-    ?>
+
+
+    <?php } else { ?>
+        <div class="d-flex justify-content-center p-3 m-3">
+        <h4 class="text-primary" >Nenhum resultado encontrado <br> Tente novamente!!</h4>
+        </div>
+        <div class="d-flex justify-content-center p-3 m-3">
+            <img src="img/medicamentos.png" class="img-fluid" alt="Responsive image" width="100">
+        </div>
+
+    <?php } ?>
+
 
 </body>
-
 <?php include('footer.php'); ?>
 
 </html>

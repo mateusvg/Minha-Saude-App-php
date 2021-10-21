@@ -14,18 +14,18 @@
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-
+<?php include('../banco/conexao.php'); ?>
 <?php
 $medName = $_POST['medName'];
 $labName = $_POST['labName'];
 $medType = $_POST['medType'];
 $price = $_POST['price'];
 
-$strcon = mysqli_connect('us-cdbr-east-04.cleardb.com', 'bb3bd2b935de69', 'fb7aa1ef', 'heroku_fb1e780812f7b81') or die('Erro ao conectar ao banco de dados');
+
 $sql = "INSERT INTO medicamentos VALUES ";
 $sql .= "('', '$medName', '$labName','$medType','$price')";
-mysqli_query($strcon, $sql) or die("Erro ao tentar cadastrar registro");
-mysqli_close($strcon);
+mysqli_query($conn, $sql) or die("Erro ao tentar cadastrar registro");
+mysqli_close($conn);
 
 ?>
 
