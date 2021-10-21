@@ -33,14 +33,11 @@
     <section>
         <div class="overflow-scroll p-5">
             <h1>Cadastro de Novo Usuário</h1>
-            <form name="Cadastro" action="cadastroPost.php" method="POST">
+            <form name="Cadastro" action="model/cadastroPost.php" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputName">Nome</label>
                         <input type="name" class="form-control" id="inputName" name="inputName" placeholder="Nome" required>
-                        <div class="invalid-feedback">
-                            Insira um nove
-                        </div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputCpf">CPF</label>
@@ -110,7 +107,7 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="funcionario" value="1">
+                        <input class="form-check-input" type="checkbox" name="funcionario" value="2">
                         <label class="form-check-label" for="gridCheck">
                             Funcionario
                         </label>

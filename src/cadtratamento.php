@@ -23,7 +23,7 @@
 <body>
   <section> 
     <div  class="overflow-scroll p-5">
-      <h1>Cadastro Medicamento</h1>
+      <h1>Cadastro Tratamento</h1>
         <form>
           <div class="form-group">
             <label for="exampleFormControlSelect1">Medicamento</label>
@@ -48,6 +48,7 @@
             <label for="Anotacoes">Anotações</label>
             <textarea class="form-control" id="Anotacoes" rows="3"></textarea>
           </div>
+          <button type="submit" class="btn btn-primary" name="enviar" >Cadastrar</button>
       </form>
     </div>
   </section>

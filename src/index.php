@@ -24,7 +24,7 @@ session_start();
     <img src="img/logo1.png" class="img-fluid" alt="Responsive image" width="100">
   </div>
   <div class="d-flex justify-content-center ">
-    <form method="POST" action="logica/valida.php" class="sombra p-3">
+    <form method="POST" action="banco/valida.php" class="sombra p-3">
       <h2 class="d-flex justify-content-center p-3 " >Área Restrita</h2>
       <div class="d-flex justify-content-center ">
 

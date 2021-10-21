@@ -11,7 +11,7 @@
     </strong>  
 
 </div>
-<a class="p-3" href="logica/sair.php">Sair</a>
+<a class="p-3" href="banco/sair.php">Sair</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,8 +38,8 @@
             Medicamentos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Cadastrar</a>
-            <a class="dropdown-item" href="#">Procurar</a>
+            <a class="dropdown-item" href="cadmedicamento.php">Cadastrar</a>
+            <a class="dropdown-item" href="cadmedicamentoGet.php">Procurar</a>
             <a class="dropdown-item" href="#">Alterar</a>
           </div>
       </ul>
