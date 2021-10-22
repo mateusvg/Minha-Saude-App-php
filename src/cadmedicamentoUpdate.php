@@ -26,7 +26,7 @@ $row = mysqli_fetch_array($result);
 ?>
 
 <body>
-<h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Atualizar Medicamento</h1>
+    <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Atualizar Medicamento</h1>
     <div class="d-flex justify-content-center p-2">
         <form name="updateMedicamento" method="post" action="">
             <div class="text-center text-success" id="mensagemSucesso">
@@ -63,7 +63,7 @@ $row = mysqli_fetch_array($result);
             </div>
             <div>
                 Preço:
-                <input class="form-control mr-sm-2 m-1" type="text" value="<?php echo $row['price']; ?>" placeholder="Procurar" name="price">
+                <input id="price" class="form-control mr-sm-2 m-1" type="text" value="<?php echo $row['price']; ?>" placeholder="Procurar" name="price">
             </div>
             <div class="mr-5 mt-1">
                 <input type="submit" name="submit" value="Atualizar" class="btn btn-success mr-5 mt-3">
@@ -91,6 +91,14 @@ $row = mysqli_fetch_array($result);
             }, seconds * 1000);
         }
     }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+<script>
+    $('#price').mask("###.###,##", {
+        reverse: true
+    });
 </script>
 
 </html>

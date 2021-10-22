@@ -51,7 +51,7 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
                         <td><?php echo $row["medName"]; ?></td>
                         <td><?php echo $row["labName"]; ?></td>
                         <td><?php echo $row["medType"]; ?></td>
-                        <td><?php echo $row["price"]; ?></td>
+                        <td>R$ <?php echo $row["price"]; ?></td>
 
                         <!-- <td><?php //echo "<a href='delete.php?id=". $row['id']. "'>DELETE</a>"; 
                                     ?></td> -->

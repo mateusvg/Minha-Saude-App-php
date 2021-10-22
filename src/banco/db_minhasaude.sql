@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `medicamentos`(
   `medName` varchar(220) NOT NULL,
   `labName` varchar(520) NOT NULL,
   `medType` varchar(50) NOT NULL,
-  `price` int(11) NOT NULL DEFAULT '0',
+  `price` varchar(250) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 )
 
@@ -78,4 +78,5 @@ INSERT INTO `medicamentos` (`id`, `medName`, `labName`, `medType`, `price`) VALU
 (1, 'paracetamol', 'Roche', 'Genérico', 15.00);
 
 -- --------------------------------------------------------
+
 
