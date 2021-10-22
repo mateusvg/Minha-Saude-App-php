@@ -20,7 +20,7 @@
 <?php include('menu.php'); ?>
 
 <body>
-<h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Peril Paciente</h1>
+<h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Perfil Paciente</h1>
     <section>
         <div class="overflow-scroll p-5">
             <button type="button" class="btn btn-light btn-block p-4">Visualizar Receita</button>

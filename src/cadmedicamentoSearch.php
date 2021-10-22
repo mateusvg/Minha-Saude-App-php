@@ -91,11 +91,12 @@ if (count($_POST) > 0) {
 
     <?php } else { ?>
         <div class="d-flex justify-content-center p-2 m-1">
-            <h4 class="text-primary">Nenhum resultado encontrado <br> Tente novamente!!</h4>
+            <h4 class="text-primary">Nenhum resultado encontrado!</h4>
         </div>
 
-        <div class="d-flex justify-content-center p-3 m-3">
-            <a href="cadmedicamentoGet.php">Voltar a Lista de Medicamentos</a>
+        <div class="d-flex justify-content-center ">
+            <button class="btn btn-secondary mt-3" onclick="location.href='cadmedicamentoGet.php'" type="button">
+                Voltar</button>
         </div>
 
         <div class="d-flex justify-content-center p-3 m-3">

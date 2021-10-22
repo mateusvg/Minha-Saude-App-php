@@ -46,8 +46,8 @@ $row = mysqli_fetch_array($result);
         <form name="updateMedicamento" method="post" action="">
             <div class="text-center text-success" id="mensagemSucesso">
                 <?php if (isset($message)) {
-                        echo $message;
-                    } ?>
+                    echo $message;
+                } ?>
             </div>
             <div class="form-group ">
                 ID:
@@ -80,13 +80,17 @@ $row = mysqli_fetch_array($result);
                 Preço:
                 <input class="form-control mr-sm-2 m-1" type="text" value="<?php echo $row['price']; ?>" placeholder="Procurar" name="price">
             </div>
+            <div class="mr-5 mt-1">
+                <input type="submit" name="submit" value="Atualizar" class="btn btn-success mr-5 mt-3">
 
-            <input type="submit" name="submit" value="Enviar" class="buttom">
-
+                <!-- 
             <div style="padding-bottom:5px;">
                 <a href="cadmedicamentoGet.php">Voltar a Lista de Medicamentos</a>
-            </div>
+            </div> -->
 
+                <button class="btn btn-secondary mt-3" onclick="location.href='cadmedicamentoGet.php'" type="button">
+                    Voltar</button>
+            </div>
         </form>
     </div>
 </body>
@@ -95,14 +99,13 @@ $row = mysqli_fetch_array($result);
         timedHide(document.getElementById('mensagemSucesso'), 3);
     }
 
-   function timedHide(element, seconds) {
+    function timedHide(element, seconds) {
         if (element) {
             setTimeout(function() {
                 element.style.display = 'none';
             }, seconds * 1000);
         }
     }
-    
 </script>
 
 </html>
