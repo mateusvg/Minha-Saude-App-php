@@ -31,14 +31,14 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
     if (mysqli_num_rows($result) > 0) {
     ?>
         <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Procurar Medicamento</h1>
-        <div class="d-flex-col p-3 m-3">
+        <div class="d-flex-col p-3 m-2">
             <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="POST" action="cadmedicamentoSearch.php">
                 <img src="img/lupa.png" class="img-fluid m-3" alt="Responsive image" width="20px">
                 <input class="form-control mr-sm-2" type="search" placeholder="Procurar" name="procurar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
             </form>
         </div>
-        <div class="table-responsive p-5">
+        <div class="table-responsive p-1">
             <table class="table">
 
                 <tr>

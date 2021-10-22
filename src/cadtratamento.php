@@ -15,7 +15,7 @@
 <body>
   <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Cadastrar Tratamento</h1>
   <section> 
-    <div  class="d-flex justify-content-center p-5">
+    <div  class="d-flex justify-content-center p-2">
         <form>
           <div class="form-group ">
             <label for="exampleFormControlSelect1">Medicamento</label>
