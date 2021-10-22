@@ -52,9 +52,7 @@
 
 <?php include('footer.php'); ?>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+<!--AJAX MASCARA PREÇO-->
 <script>
     $('#price').mask("###.###,##", {
         reverse: true
