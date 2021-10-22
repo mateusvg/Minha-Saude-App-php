@@ -21,12 +21,11 @@ $nome = $_POST['inputName'];
 $email = $_POST['inputEmail'];
 $senha = $_POST['inputPassword'];
 $senhaConvertida = md5($senha);
-$situacoe_id = $_POST['paciente'];
-$niveis_acesso_id = $_POST['funcionario'];
+$niveis_acesso_id = $_POST['nivelAcesso'];
 
 
 $sql = "INSERT INTO usuarios VALUES ";
-$sql .= "('','$nome', '$email','$senhaConvertida','$situacoe_id','$niveis_acesso_id','','null')";
+$sql .= "('','$nome', '$email','$senhaConvertida','1','$niveis_acesso_id','','null')";
 mysqli_query($conn, $sql) or die("Erro ao tentar cadastrar registro");
 mysqli_close($conn);
 
