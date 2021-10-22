@@ -20,9 +20,9 @@
 <?php include('menu.php'); ?>
 
 <body>
+<h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Peril Paciente</h1>
     <section>
         <div class="overflow-scroll p-5">
-            <h1>Paciente</h1>
             <button type="button" class="btn btn-light btn-block p-4">Visualizar Receita</button>
             <button type="button" class="btn btn-light btn-block p-4">Tratamento</button>
             <button type="button" class="btn btn-light btn-block p-4">Bulas</button>

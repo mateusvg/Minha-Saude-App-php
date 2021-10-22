@@ -15,10 +15,6 @@
             justify-content: center;
             align-items: center;
         }
-
-        a {
-            color: white;
-        }
     </style>
 
 </head>
@@ -34,11 +30,10 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
     <?php
     if (mysqli_num_rows($result) > 0) {
     ?>
+        <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Procurar Medicamento</h1>
         <div class="d-flex-col p-3 m-3">
-            <div class="d-flex-col p-3 m-3">
-                Procurar Medicamentos
-            </div>
-            <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
+            <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="POST" action="cadmedicamentoSearch.php">
+                <img src="img/lupa.png" class="img-fluid m-3" alt="Responsive image" width="20px">
                 <input class="form-control mr-sm-2" type="search" placeholder="Procurar" name="procurar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
             </form>
@@ -52,6 +47,7 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
                     <th scope="col">Laboratorio</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Preço</th>
+                    <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
                 <?php
@@ -69,8 +65,13 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
                         <!-- <td><?php //echo "<a href='delete.php?id=". $row['id']. "'>DELETE</a>"; 
                                     ?></td> -->
                         <td>
-                            <button type="button" class="btn btn-danger">
-                                <?php echo "<a href='delete.php?id=" . $row['id'] . "'>Deletar</a>"; ?>
+                            <button type="button" class="btn btn-outline-danger">
+                                <?php echo "<a href='cadmedicamentoDelete.php?id=" . $row['id'] . "'>Deletar</a>"; ?>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-outline-warning">
+                                <?php echo "<a href='cadmedicamentoUpdate.php?id=" . $row['id'] . "'>Atualizar</a>"; ?>
                             </button>
                         </td>
 

@@ -25,7 +25,7 @@ session_start();
   </div>
   <div class="d-flex justify-content-center ">
     <form method="POST" action="banco/valida.php" class="sombra p-3">
-      <h2 class="d-flex justify-content-center p-3 " >Área Restrita</h2>
+      <h2 class="d-flex justify-content-center p-3 ">Área Restrita</h2>
       <div class="d-flex justify-content-center ">
 
         <label for="inputEmail" class="pr-2">Email: </label>
@@ -37,8 +37,8 @@ session_start();
 
       </div>
       <button class="btn btn-lg btn-info btn-block" type="submit">Acessar</button>
-      <div class="p-2">   
-      <a>Já possui cadastro? </a> <a href="cadastro.html">Cadastrar</a>
+      <div class="p-2">
+        <a>Já possui cadastro? </a> <a href="cadastro.html">Cadastrar</a>
       </div>
     </form>
   </div>
@@ -56,9 +56,10 @@ session_start();
     }
     ?>
   </p>
+  
   <p class="text-center text-success">
-    <?php 
-    
+    <?php
+
     ?>
   </p>
 
