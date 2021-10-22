@@ -41,7 +41,7 @@ $row = mysqli_fetch_array($result);
 
 <body>
     <h1 class="m-3 mb-2" style="background-color: #faebd7;">Atualizar Medicamento</h1>
-    <div class="d-flex justify-content-center p-5">
+    <div class="d-flex justify-content-center p-2">
 
         <form name="updateMedicamento" method="post" action="">
             <div class="text-center text-success" id="mensagemSucesso">
