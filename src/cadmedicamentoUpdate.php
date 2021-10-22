@@ -7,15 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Cadastro Medicamento</title>
-    <style>
-        h1 {
-            background-color: antiquewhite;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
 
 </head>
 
@@ -34,15 +25,9 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos WHERE id='" . $_GET['i
 $row = mysqli_fetch_array($result);
 ?>
 
-
-<head>
-    <title>Atualiza Medicamento</title>
-</head>
-
 <body>
-    <h1 class="m-3 mb-2" style="background-color: #faebd7;">Atualizar Medicamento</h1>
+<h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Atualizar Medicamento</h1>
     <div class="d-flex justify-content-center p-2">
-
         <form name="updateMedicamento" method="post" action="">
             <div class="text-center text-success" id="mensagemSucesso">
                 <?php if (isset($message)) {

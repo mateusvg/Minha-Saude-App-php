@@ -17,7 +17,7 @@
 <body>
   <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Cadastrar Medicamento</h1>
   <section>
-    <div class="d-flex justify-content-center p-2 ">
+    <div class="d-flex justify-content-center p-2">
       <form name="Cadastro Medicamentos" action="cadmedicamentoPost.php" method="POST">
         <div class="form-group ">
           <label for="inputName">Nome</label>

@@ -7,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <title>Perfil Paciente</title>
+    <title>Cadastro Inicial</title>
     <style>
-        h1 {
-            background-color: antiquewhite;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .sombra {
+            box-shadow: 10px 5px 5px #d3e9f0;
+            background-color: #faebd7;
+            border-radius: 2rem;
         }
     </style>
     <script type="text/javascript">
@@ -30,14 +28,15 @@
     </script>
 </head>
 
-<body>
-    <div id="app">
-        <section>
-            <div class="overflow-scroll p-5">
-                <h1>Cadastro de Novo Usuário</h1>
-                <h2>Selecione um tipo de cadastro:</h2>
+<body class="mb-5">
+    <h1 class=" d-flex justify-content-center align-items-center m-3 mb-2 " style="background-color: #faebd7;">Cadastro Inicial</h1>
+    <div id="app" class="d-flex justify-content-center p-1">
+        <section class="d-flex justify-content-center p-1">
+            <div>
+                <h2 class="d-flex justify-content-center ">Cadastro de Novo Usuário</h2>
+                <h5 class="d-flex justify-content-center m-2 p-3">Selecione um tipo de cadastro:</h5>
 
-                <div class="form-check">
+                <div class="form-check  ">
 
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" @click="formType1">
                     <label class="form-check-label" for="flexRadioDefault1" @click="formType1">
@@ -58,7 +57,7 @@
                 </div>
 
                 <!--ATENDENTE-->
-                <form name="Cadastro" action="model/cadastroPost.php" method="POST" v-show="atendente">
+                <form class="mt-4 sombra p-3" name="Cadastro" action="model/cadastroPost.php" method="POST" v-show="atendente">
                     <h2>Atendente</h2>
                     <input name="nivelAcesso" value="1" v-show="false">
                     <div class="form-row">
@@ -131,7 +130,7 @@
 
 
                 <!--Paciente-->
-                <form name="Cadastro" action="model/cadastroPost.php" method="POST" v-show="paciente">
+                <form class="mt-4 sombra p-3" name="Cadastro" action="model/cadastroPost.php" method="POST" v-show="paciente">
                     <h2>Paciente</h2>
                     <input name="nivelAcesso" value="2" v-show="false">
                     <div class="form-row">
@@ -204,7 +203,7 @@
 
 
                 <!--Farmaceutico-->
-                <form action="model/cadastroPost.php" method="POST" v-show="farmaceutico">
+                <form class="mt-4 sombra p-3" action="model/cadastroPost.php" method="POST" v-show="farmaceutico">
                     <h2>Farmacêutico</h2>
                     <input name="nivelAcesso" value="3" v-show="false">
                     <div class="form-row">
