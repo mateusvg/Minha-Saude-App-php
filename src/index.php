@@ -38,7 +38,7 @@ session_start();
       </div>
       <button class="btn btn-lg btn-info btn-block" type="submit">Acessar</button>
       <div class="p-2">   
-      <a>Já possui cadastro? </a> <a href="cadastro.php">Cadastrar</a>
+      <a>Já possui cadastro? </a> <a href="cadastro.html">Cadastrar</a>
       </div>
     </form>
   </div>
