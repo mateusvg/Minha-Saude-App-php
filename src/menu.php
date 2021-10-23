@@ -1,15 +1,14 @@
 <style>
-  .texto{
+  .texto {
     font-size: 0.7em;
   }
-  
 </style>
 <header>
   <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #83ACF2;">
     <img class="img-fluid" alt="Responsive image" src="img/logo.png" width="70" href="home.html">
     <div class="col ">
       <div class="" href="#">Minha Saúde</div>
-      <div class="texto mt-0"> <?= date('d-m-Y')?></div>
+      <div class="texto mt-0"> <?= date('d-m-Y') ?></div>
       <p6 class="texto" id="timestamp"></p6>
     </div>
 
@@ -17,7 +16,12 @@
       <?php
       session_start();
       echo "Usuario: " . $_SESSION['usuarioNome'];
+      //valida se usuario está logado, caso não, e tenta acessar outras paginas via URL, é regirecionado para pagina de login
+      if (!isset($_SESSION['usuarioNome'])) {
+        header("location:index.php");
+      }
       ?>
+
     </strong>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
