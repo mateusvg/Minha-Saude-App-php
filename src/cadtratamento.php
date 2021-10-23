@@ -14,37 +14,42 @@
 
 <body>
   <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Cadastrar Tratamento</h1>
-  <section> 
-    <div  class="d-flex justify-content-center p-2">
-        <form>
-          <div class="form-group ">
-            <label for="exampleFormControlSelect1">Medicamento</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group ">
-            <label for="dataInicio">Data de início</label>
-            <input type="date" class="form-control" id="dataInicio">
-          </div>
-          <div class="form-group ">
-            
-            <label for="Duracao">Duração</label>
-            <input class="form-control" type="number" name="Duracao" id="Duracao">
-          </div>
-          <div class="form-group ">
-            <label for="Anotacoes">Anotações</label>
-            <textarea class="form-control" id="Anotacoes" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" name="enviar" >Cadastrar</button>
+  <section>
+    <div class="d-flex justify-content-center p-2">
+      <form>
+        <div class="form-group ">
+          <label for="medName">Tipo:</label>
+          <select scope="row" id="medName" name="medName" value="<?php echo $row['medName']; ?>" class="form-control m-1 ">
+            <option selected>1</option>
+            <option value="Fitoterápico">2</option>
+            <option value="Alopático">3</option>
+            <option value="Homeopático">4</option>
+            <option value="Genérico">5</option>
+            <option value="Referência">6</option>
+            <option value="Similar">7</option>
+            <option value="Manipulado">8</option>
+          </select>
+        </div>
+        <div class="form-group ">
+          <label for="dataInicio">Data de início</label>
+          <input type="date" class="form-control" id="dataInicio">
+        </div>
+        <div class="form-group ">
+
+          <label for="Duracao">Duração</label>
+          <input class="form-control" type="number" name="Duracao" id="Duracao">
+        </div>
+        <div class="form-group ">
+          <label for="Anotacoes">Anotações</label>
+          <textarea class="form-control" id="Anotacoes" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" name="enviar">Cadastrar</button>
       </form>
     </div>
   </section>
 </body>
 
+
 <?php include('footer.php'); ?>
+
 </html>

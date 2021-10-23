@@ -17,6 +17,14 @@
 <body>
   <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Cadastrar Medicamento</h1>
   <section>
+    <div class="text-center text-success" id="mensagemSucesso">
+      <?php
+      if ($_GET['status'] ?? null == 'success') :
+        echo 'Medicamento cadastrado com sucesso';
+      endif;
+      ?>
+    </div>
+
     <div class="d-flex justify-content-center p-2">
       <form name="Cadastro Medicamentos" action="cadmedicamentoPost.php" method="POST">
         <div class="form-group ">
@@ -54,9 +62,26 @@
 
 <!--AJAX MASCARA PREÇO-->
 <script>
-    $('#price').mask("###.###,##", {
-        reverse: true
-    });
+  $('#price').mask("###.###,##", {
+    reverse: true
+  });
 </script>
+
+
+<!--temporizador mensagem cadastro concluido-->
+<script type="text/javascript">
+    window.onload = function() {
+        timedHide(document.getElementById('mensagemSucesso'), 3);
+    }
+
+    function timedHide(element, seconds) {
+        if (element) {
+            setTimeout(function() {
+                element.style.display = 'none';
+            }, seconds * 1000);
+        }
+    }
+</script>
+
 
 </html>

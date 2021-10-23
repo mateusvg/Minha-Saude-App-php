@@ -68,13 +68,10 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
 
                     </tr>
 
-
                 <?php
-
                     $i++;
                 }
                 ?>
-
 
             </table>
         </div>

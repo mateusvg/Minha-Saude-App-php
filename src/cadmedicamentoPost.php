@@ -24,17 +24,10 @@ $price = $_POST['price'];
 
 $sql = "INSERT INTO medicamentos VALUES ";
 $sql .= "('', '$medName', '$labName','$medType','$price')";
+$_message = "Cadastro concluido";
 mysqli_query($conn, $sql) or die("Erro ao tentar cadastrar registro");
 mysqli_close($conn);
 
+header('location:cadmedicamento.php?status=success');
 ?>
-
-
-    <div class=" logo" data-toggle="modal">
-    <img src="img/logo1.png" class="img-fluid" alt="Responsive image" width="100">
-    <h3 class="cor">Cadastro Realizado com Sucesso!!!!</h3>
-    <meta http-equiv="refresh" content="1; url=cadmedicamento.php" />
-    
-
-</div>
 </html>

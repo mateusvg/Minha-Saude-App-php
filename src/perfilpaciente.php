@@ -14,12 +14,13 @@
 <body>
 <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Perfil Paciente</h1>
     <section>
-        <div class="overflow-scroll p-5">
-            <button type="button" class="btn btn-light btn-block p-4">Visualizar Receita</button>
-            <button type="button" class="btn btn-light btn-block p-4">Tratamento</button>
-            <button type="button" class="btn btn-light btn-block p-4">Bulas</button>
-            <button type="button" class="btn btn-light btn-block p-4">Caixinha de Remédios</button>
-            <button type="button" class="btn btn-light btn-block p-4">Procurar Preços</button>
+        <div class="overflow-scroll p-2">
+            <a class="btn btn-light btn-block p-4" href="#" role="button">Visualizar Receita</a>
+            <a class="btn btn-light btn-block p-4" href="#" role="button">Tratamento</a>
+            <a class="btn btn-light btn-block p-4" href="#" role="button">Bulas</a>
+            <a class="btn btn-light btn-block p-4" href="#" role="button">Caixinha de Remédios</a>
+            <a class="btn btn-light btn-block p-4" href="#" role="button">Procurar preços</a>
+            <a class="btn btn-light btn-block p-4" href="#" role="button">Configurações</a>
         </div>
     </section>
 </body>

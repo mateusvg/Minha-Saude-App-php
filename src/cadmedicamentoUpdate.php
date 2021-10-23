@@ -79,6 +79,7 @@ $row = mysqli_fetch_array($result);
         </form>
     </div>
 </body>
+<!--temporizador mensagem cadastro concluido-->
 <script type="text/javascript">
     window.onload = function() {
         timedHide(document.getElementById('mensagemSucesso'), 3);
@@ -93,6 +94,7 @@ $row = mysqli_fetch_array($result);
     }
 </script>
 
+<!--Mascara preço-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
 <script>

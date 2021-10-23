@@ -1,9 +1,16 @@
+<style>
+  .texto{
+    font-size: 0.7em;
+  }
+  
+</style>
 <header>
   <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #83ACF2;">
     <img class="img-fluid" alt="Responsive image" src="img/logo.png" width="70" href="home.html">
-    <div class="col">
-      <div class="p-0" href="#">Minha Saúde</div>
-      <div class="p-0" id="timestamp"></div>
+    <div class="col ">
+      <div class="" href="#">Minha Saúde</div>
+      <div class="texto mt-0"> <?= date('d-m-Y')?></div>
+      <p6 class="texto" id="timestamp"></p6>
     </div>
 
     <strong class="p-2">
@@ -41,7 +48,6 @@
               <a class="dropdown-item" href="cadmedicamento.php">Cadastrar</a>
               <a class="dropdown-item" href="cadmedicamentoGet.php">Procurar</a>
             </div>
-
           <li class="nav-item">
             <a class="nav-link" href="banco/sair.php">Sair</a>
           </li>

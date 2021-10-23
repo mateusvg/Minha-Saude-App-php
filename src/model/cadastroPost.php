@@ -20,7 +20,7 @@
 
 <!--Seta a data-->
 <?php
-date_default_timezone_set('UTC');
+date_default_timezone_set('America/Sao_Paulo');
 $timeAndDate= date('Y-m-d H:i:s');
 ?>
 
