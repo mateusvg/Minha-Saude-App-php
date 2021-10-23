@@ -1,6 +1,3 @@
-<?php include_once("src/index.php"); 
-
-header("Location: src/index.php");
-exit();
-
+<?php include_once("index.php"); 
+header('Location: '.src/index.php);
 ?>
