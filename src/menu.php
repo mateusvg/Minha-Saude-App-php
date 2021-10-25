@@ -53,6 +53,10 @@
               <a class="dropdown-item" href="cadmedicamentoGet.php">Procurar</a>
             </div>
           <li class="nav-item">
+            <a class="nav-link" href="googlemaps2.php">Farmácias</a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="banco/sair.php">Sair</a>
           </li>
 

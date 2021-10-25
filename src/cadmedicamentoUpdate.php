@@ -17,6 +17,7 @@
 include_once 'banco/conexao.php'; ?>
 
 <?php
+// . DOT concatena strings
 if (count($_POST) > 0) {
     mysqli_query($conn, "UPDATE medicamentos set  medName='" . $_POST['medName'] . "', labName='" . $_POST['labName'] . "', medType='" . $_POST['medType'] . "' ,price='" . $_POST['price'] . "' WHERE id='" . $_POST['id'] . "'");
     $message = "Medicamento atualizado com sucesso";
@@ -28,6 +29,7 @@ $row = mysqli_fetch_array($result);
 <body>
     <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Atualizar Medicamento</h1>
     <div class="d-flex justify-content-center p-2">
+
         <form name="updateMedicamento" method="post" action="">
             <div class="text-center text-success" id="mensagemSucesso">
                 <?php if (isset($message)) {

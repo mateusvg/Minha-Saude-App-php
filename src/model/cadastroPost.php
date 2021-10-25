@@ -30,10 +30,15 @@ $email = $_POST['inputEmail'];
 $senha = $_POST['inputPassword'];
 $senhaConvertida = md5($senha);
 $niveis_acesso_id = $_POST['nivelAcesso'];
+$cpf = $_POST['cpf'];
+$rua = $_POST['street'];
+$estado = $_POST['state'];
+$cep = $_POST['cep'];
+$cidade = $_POST['cidade'];
 
 
 $sql = "INSERT INTO usuarios VALUES ";
-$sql .= "('','$nome', '$email','$senhaConvertida','1','$niveis_acesso_id','$timeAndDate','')";
+$sql .= "('','$nome', '$email','$senhaConvertida','1','$niveis_acesso_id','$timeAndDate','','$cpf', '$rua', '$estado', '$cep', '$cidade')";
 mysqli_query($conn, $sql) or die("Erro ao tentar cadastrar registro");
 mysqli_close($conn);
 

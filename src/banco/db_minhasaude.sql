@@ -18,6 +18,11 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `niveis_acesso_id` int(11) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL,
+  `cpf` varchar(20) NOT NULL DEFAULT '0',
+  `rua` varchar(250) NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  `cep` VARCHAR(10) NOT NULL,
+  `cidade` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
@@ -25,8 +30,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `situacoe_id`, `niveis_acesso_id`, `created`, `modified`) VALUES
-(1, 'teste', 'teste@teste.com', '202cb962ac59075b964b07152d234b70', 1, 1, '2016-02-14 00:00:01', '2016-02-20 21:58:01'),
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `situacoe_id`, `niveis_acesso_id`, `created`, `modified`, `cpf`, `rua`, `estado`, `cep`, `cidade`) VALUES
+(1, 'teste', 'teste@teste.com', '202cb962ac59075b964b07152d234b70', 1, 1, '2016-02-14 00:00:01', '2016-02-20 21:58:01', '12345678', 'nomerua', 'nomeestado', '30350690', 'BH'),
 
 
 
