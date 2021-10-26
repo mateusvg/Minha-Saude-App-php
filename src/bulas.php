@@ -19,8 +19,9 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
 
 <body>
 
+
     <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Procurar Bula</h1>
-    <div class="d-flex-col p-3 m-2">
+
         <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="POST" onclick="<?php curl_init() ?>" action="">
             <img src="img/lupa.png" class="img-fluid m-3" alt="Responsive image" width="20px">
             <input class="form-control mr-sm-2" type="search" placeholder="Nome Medicamento" name="nome_bula" aria-label="Search">
@@ -115,7 +116,7 @@ $result = mysqli_query($conn, "SELECT * FROM medicamentos");
         $json3 = ($json2->apresentacoes[0]->fabricantesNacionais);
         //echo print_r($json3);
         foreach ($json3 as $obj) {
-            echo @print_r($obj->fabricante); 
+            echo @print_r($obj->fabricante);
         }
 
 

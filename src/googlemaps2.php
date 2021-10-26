@@ -3,15 +3,15 @@
 
 <head>
   <title>Places Search Box</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <link rel="stylesheet" type="text/css" href="./style.css" />
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="./index.js"></script>
+
   <style>
     /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
     #map {
-      height: 100%;
+      height: 80%;
       margin: 20px;
     }
 
@@ -19,8 +19,7 @@
     html,
     body {
       height: 80%;
-      margin: 0;
-      padding: 0;
+      width: 100%;
     }
 
     #description {
@@ -99,15 +98,13 @@
   </style>
 
 
-
 </head>
 
 <body>
   <?php include('menu.php'); ?>
-
   <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="farmácias" />
 
-  <div id="map"></div>
+  <div id="map" class="z-depth-1-half map-container"></div>
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu8gwDYdD61W3MJLSzXNoOGCSK5SA6kYo&callback=initAutocomplete&libraries=places&v=weekly" async></script>
@@ -134,7 +131,7 @@
     function showPosition(position) {
       x.innerHTML = "Latitude: " + position.coords.latitude +
         "<br>Longitude: " + position.coords.longitude;
-        return position.coords.latitude, position.coords.longitude
+      return position.coords.latitude, position.coords.longitude
     }
   </script>
 
@@ -152,77 +149,77 @@
       let lat = -19.8157
       let lon = -43.9542
 
-     
-        var mapProp = {
-          center: new google.maps.LatLng(lat, lon),
-          zoom: 16,
-        };
-      
 
-        const map = new google.maps.Map(document.getElementById("map"),mapProp);
-        // Create the search box and link it to the UI element.
-        const input = document.getElementById("pac-input");
-        const searchBox = new google.maps.places.SearchBox(input);
+      var mapProp = {
+        center: new google.maps.LatLng(lat, lon),
+        zoom: 16,
+      };
 
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener("bounds_changed", () => {
-          searchBox.setBounds(map.getBounds());
+
+      const map = new google.maps.Map(document.getElementById("map"), mapProp);
+      // Create the search box and link it to the UI element.
+      const input = document.getElementById("pac-input");
+      const searchBox = new google.maps.places.SearchBox(input);
+
+      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+      // Bias the SearchBox results towards current map's viewport.
+      map.addListener("bounds_changed", () => {
+        searchBox.setBounds(map.getBounds());
+      });
+
+      let markers = [];
+
+      // Listen for the event fired when the user selects a prediction and retrieve
+      // more details for that place.
+      searchBox.addListener("places_changed", () => {
+        const places = searchBox.getPlaces();
+
+        if (places.length == 0) {
+          return;
+        }
+
+        // Clear out the old markers.
+        markers.forEach((marker) => {
+          marker.setMap(null);
         });
+        markers = [];
 
-        let markers = [];
+        // For each place, get the icon, name and location.
+        const bounds = new google.maps.LatLngBounds();
 
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener("places_changed", () => {
-          const places = searchBox.getPlaces();
-
-          if (places.length == 0) {
+        places.forEach((place) => {
+          if (!place.geometry || !place.geometry.location) {
+            console.log("Returned place contains no geometry");
             return;
           }
 
-          // Clear out the old markers.
-          markers.forEach((marker) => {
-            marker.setMap(null);
-          });
-          markers = [];
+          const icon = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25),
+          };
 
-          // For each place, get the icon, name and location.
-          const bounds = new google.maps.LatLngBounds();
-
-          places.forEach((place) => {
-            if (!place.geometry || !place.geometry.location) {
-              console.log("Returned place contains no geometry");
-              return;
-            }
-
-            const icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25),
-            };
-
-            // Create a marker for each place.
-            markers.push(
-              new google.maps.Marker({
-                map,
-                icon,
-                title: place.name,
-                position: place.geometry.location,
-              })
-            );
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
+          // Create a marker for each place.
+          markers.push(
+            new google.maps.Marker({
+              map,
+              icon,
+              title: place.name,
+              position: place.geometry.location,
+            })
+          );
+          if (place.geometry.viewport) {
+            // Only geocodes have viewport.
+            bounds.union(place.geometry.viewport);
+          } else {
+            bounds.extend(place.geometry.location);
+          }
         });
-      }
+        map.fitBounds(bounds);
+      });
+    }
   </script>
   <?php include('footer.php'); ?>
 </body>

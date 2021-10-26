@@ -13,9 +13,14 @@
 <?php include('banco/conexao.php'); ?>
 
 <?php
-$result = mysqli_query($conn, "SELECT COUNT(*) FROM medicamentos");
-while ($row = $result->fetch_assoc()) {
-  $numeroTotal =  $row['COUNT(*)'];
+$numMedicamento = mysqli_query($conn, "SELECT COUNT(*) FROM medicamentos");
+while ($row = $numMedicamento->fetch_assoc()) {
+  $numTotalMedicamentos =  $row['COUNT(*)'];
+}
+
+$usuariosAtivos = mysqli_query($conn, "SELECT COUNT(*) FROM usuarios");
+while ($row = $usuariosAtivos->fetch_assoc()) {
+  $numUsuariosAtivos =  $row['COUNT(*)'];
 }
 
 ?>
@@ -44,14 +49,14 @@ while ($row = $result->fetch_assoc()) {
           <div class="card bg-light mb-3 m-2" style="max-width: 12rem;">
             <div class="card-header">Medicamentos</div>
             <div class="card-body ">
-              <h5 class="card-title"><?php echo $numeroTotal  ?></h5>
+              <h5 class="card-title"><?php echo $numTotalMedicamentos  ?></h5>
               <p class="card-text">Número de mericamentos cadastrados</p>
             </div>
           </div>
           <div class="card bg-light mb-3 m-2" style="max-width: 12rem;">
             <div class="card-header">Usuários</div>
             <div class="card-body">
-              <h5 class="card-title">1</h5>
+              <h5 class="card-title"><?php echo $numUsuariosAtivos  ?></h5>
               <p class="card-text">Número de usuarios ativos no sistema</p>
             </div>
           </div>
