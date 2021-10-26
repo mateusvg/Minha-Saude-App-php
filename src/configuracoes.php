@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Cadastro Medicamento</title>
+    <title>Configurações Usuarios</title>
 
 </head>
 <?php include('banco/conexao.php'); ?>
@@ -31,7 +31,7 @@ $result = mysqli_query($conn, "SELECT * FROM usuarios where id='$recuperaID'");
     <?php
     if (mysqli_num_rows($result) > 0) {
     ?>
-        <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Configurações</h1>
+        <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Configurações Usuários</h1>
 
         <?php
         $i = 0;
@@ -78,8 +78,8 @@ $result = mysqli_query($conn, "SELECT * FROM usuarios where id='$recuperaID'");
                 </div>
 
                 <button type="button" class="btn btn-outline-warning">
-                    <?php echo "<a href='cadmedicamentoUpdate.php?id=" . $row['id'] . "'>Atualizar</a>"; ?>
-                </button>
+                    <?php echo "<a href='configuraçõesUpdate.php?id=" . $row['id'] . "'>Atualizar</a>"; ?>
+                </button> <<-TODO
 
             <?php
             $i++;

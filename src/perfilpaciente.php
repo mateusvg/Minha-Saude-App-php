@@ -15,11 +15,11 @@
 <h1 class=" d-flex justify-content-center m-3 mb-2" style="background-color: #faebd7;">Perfil Paciente</h1>
     <section>
         <div class="overflow-scroll p-2">
-            <a class="btn btn-light btn-block p-4" href="#" role="button"> TODO --> Visualizar Receita</a>
-            <a class="btn btn-light btn-block p-4" href="#" role="button">TODO--> Tratamento</a>
+            <a class="btn btn-danger btn-block p-4" href="#" role="button"> TODO --> Visualizar Receita</a>
+            <a class="btn btn-danger btn-block p-4" href="#" role="button">TODO--> Tratamento</a>
             <a class="btn btn-light btn-block p-4" href="bulas.php" role="button">Bulas</a>
-            <a class="btn btn-light btn-block p-4" href="#" role="button">TODO--> Caixinha de Remédios</a>
-            <a class="btn btn-light btn-block p-4" href="#" role="button">TODO--> Procurar preços</a>
+            <a class="btn btn-danger btn-block p-4" href="#" role="button">TODO--> Caixinha de Remédios</a>
+            <a class="btn btn-danger btn-block p-4" href="#" role="button">TODO--> Procurar preços</a>
             <a class="btn btn-light btn-block p-4" href="configuracoes.php" role="button">Configurações</a>
         </div>
     </section>
