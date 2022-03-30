@@ -107,7 +107,7 @@
   <div id="map" class="z-depth-1-half map-container"></div>
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu8gwDYdD61W3MJLSzXNoOGCSK5SA6kYo&callback=initAutocomplete&libraries=places&v=weekly" async></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=" async></script>
 
 
   <!--GEOLOCALIZAÇÃO  HTML5-->
